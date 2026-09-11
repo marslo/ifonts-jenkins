@@ -1,0 +1,397 @@
+/* ==UserStyle==
+@name           iFonts Jenkins (marslo)
+@version        0.0.1
+@namespace      github.com/marslo
+@description    jenkins-only font customization
+@author         marslo
+@homepageURL    https://github.com/marslo/ifonts
+@updateURL      https://github.com/marslo/ifonts/raw/main/ifonts-jenkins.user.css
+@advanced       text font-family-sans        "Sans Fonts"        ""Titillium Nerd Font Upright", "Titillium Nerd Font", "Gisha Nerd Font", "Recursive Sans Casual Static Nerd Font", "Yoshe Shayufeite Nerd Font", "MicrosoftYaHei Nerd Font", "LXGWBright Nerd Font", "Qian Li Jiang Shan Nerd Font", "MFeltPenPRC Nerd Font", "MFeltPenHKSemi Nerd Font", "Grandstander Nerd Font", "Ubuntu", "Candara Nerd Font", "Titillium Up", Titillium, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Font Text""
+@advanced       text font-family-mono        "Mono Fonts"        ""OperatorMonoSSmLig Nerd Font Mono", "OperatorMonoLig Nerd Font Mono", "OperatorMono Nerd Font Mono", "Lekton Nerd Font Mono", "JetBrainsMono Nerd Font Mono", "RecMonoCasual Nerd Font Mono", "Monaco Nerd Font Mono", Menlo, "Andale Mono", "Ubuntu Mono", "Monofur Nerd Font Mono", Consolas, "Yozai Nerd Font""
+@advanced       text font-family-handwritten "Handwritten Fonts" ""Papyrus Nerd Font", fantasy"
+@advanced       text font-family-icon        "Icon Fonts"        ""Google Material Icons", "Material Icons Extended", entypo, "Adgs Icons", "Google Symbols", "Font Awesome 7 Pro", "Font Awesome 5 Free", "Font Awesome 5 Pro", "Font Awesome 6 Free", "Font Awesome 6 Pro", FontAwesome, "Glyphicons Halflings", ReadMe-Icons, StructureFontAwesome, VideoJS, codicon, controlIcons, iconfont, iconfont-luckysheet, icozoom, retina_icons, streamline, union-design-icons, yunfont, okticon, docons, zipformplus, "Font Awesome 6 Brands", octicons, perforceIcons, FontADP, "Support MDL2 Assets", geico, marvell-icons, icomoon, element-icons, olive-icons, "SF Pro Icons", Iconochive-Regular, sans-serif"
+==/UserStyle== */
+
+/* csslint ignore:start */
+@import url('http://fonts.googleapis.com/css?family=Overlock:400,700,400italic,700italic|Calligraffitti');
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC:wght@400;700&display=swap');
+/* csslint ignore:end */
+
+/* ╔════════════════════════════════════════════════════════════╗ */
+/* ║                 global: shared definitions                 ║ */
+/* ╚════════════════════════════════════════════════════════════╝ */
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: 'OperatorMonoSSmLig Nerd Font Mono';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://github.com/marslo/fonts/raw/fonts/Operator/OperatorMonoSSmLigNF/otf/OperatorMonoSSmLigNerdFontMono-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'OperatorMonoSSmLig Nerd Font Mono';
+  font-weight: 300;
+  font-style: italic;
+  src: url('https://github.com/marslo/fonts/raw/fonts/Operator/OperatorMonoSSmLigNF/otf/OperatorMonoSSmLigNerdFontMono-LightItalic.otf') format('opentype');
+}
+
+:root {
+  --font-family-sans: /*[[font-family-sans]]*/;
+  --font-family-mono: /*[[font-family-mono]]*/;
+  --font-family-mono-accent: 'VictorMono Nerd Font Mono', 'Lekton Nerd Font Mono', 'LXGWWenKaiMono Nerd Font Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  --font-family-handwritten: /*[[font-family-handwritten]]*/;
+  --font-family-icon: /*[[font-family-icon]]*/;
+  --font-family-override: /*[[font-family-sans]]*/;
+
+  --font-size-big-sans: 20px;
+  --font-size-normal-sans: 18px;
+  --font-size-small-sans: 15px;
+
+  --font-size-big-mono: 17px;
+  --font-size-normal-mono: 15px;
+  --font-size-small-mono: 14px;
+  --font-size-xsmall-mono: 13px;
+
+  --font-size-h1: 34px;
+  --font-size-h2: 26px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+  --font-size-h5: 16px;
+}
+
+
+@-moz-document regexp("https?://([^/]*jenkins((?!gitpod)[^/])*\\.com/?.*|34\\.233.*|3\\.230.*|10\\.69.*|imarslo\\.jenkins\\.com|.*ci\\.jenkins\\.io).*") {
+
+  /**
+   * jenkins controllers
+  **/
+
+  /* :root cannot take value from var(..) */
+  :root {
+    --font-family-sans: /*[[font-family-sans]]*/ !important;
+    --font-family-mono: /*[[font-family-mono]]*/ !important;
+
+    /**
+     * #859900 : oklch(70% 0.12 140) - solarized
+     * #b8bb26 : oklch(78% 0.15 120) - gruvbox
+     * #98c379 : oklch(72% 0.17 135) - one dark
+     * #6A9955 : oklch(65% 0.14 145) - vscode
+     * #22863a : oklch(55% 0.25 150) - github
+    **/
+    --green: oklch(65% 0.14 145);
+  }
+
+  ::placeholder { font-style: italic !important; font-family: var(--font-family-mono) !important; }
+  ::-ms-input-placeholder { font-style: italic !important; font-family: var(--font-family-mono) !important; }
+
+  /* ── fix the Pipeline Graph View plugin ( 340.v28cecee8b_25f ) svg icon issue ── */
+  /* base: avoid clipping + fix negative x/y everywhere */
+  svg.svg-icon {
+    overflow: visible !important;
+    x: 0 !important;
+    y: 0 !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+  /* exception: ONLY pipeline graph nodes → 24px (circle + checkmark/dots) */
+  .PWGx-pipeline-node .build-status-icon__outer > svg.svg-icon,
+  .PWGx-pipeline-node .build-status-icon__wrapper > svg.svg-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  *:not(
+    pre,
+    code,
+    textarea,
+    button,
+    select,
+    option,
+    cursor,
+    kbd,
+    icon,
+    input,
+    i
+  ):not(::before):not(::after):not(canvas.graph-cursor-pointer):not(
+    code *,
+    textarea *,
+    * pre *,
+    div.ace_editor,
+    .ace_editor *
+  ):not(
+    [class*="CodeMirror-"],
+    [class*="DPvwYc"],
+    [class*="Da"],
+    [class*="ace_"],
+    [class*="avatar-"],
+    [class*="bowtie-"],
+    [class*="cm-"],
+    [class*="code"],
+    [class*="drop"],
+    [class*="fa-"],
+    [class*="gr-"],
+    [class*="hljs"],
+    [class*="ico"],
+    [class*="js-post"],
+    [class*="language-"],
+    [class*="line"],
+    [class*="ms-Icon"],
+    [class*="para"],
+    [class*="pc"],
+    [class*="pl-"],
+    [class*="post-"],
+    [class*="setting-"],
+    [class*="sort-caret"],
+    [class*="view-"],
+    [class*="w3-"],
+    [class*='wysiwyg-macro-*'],
+    [role=presentation]
+  ) {
+    font-family: var(--font-family-sans) !important;
+  }
+
+  div.tab *,
+  [class*="footer"],
+  div#view-message *:not(pre):not([class*="cm"]),
+  div#side-panel *,
+  span.task-link-text,
+  table.middle-align *,
+  #breadcrumbs li a,
+  #breadcrumbs li a:link ,
+  div.pane.desc *,
+  .pane-content a,
+  h1.page-headline,
+  div.cbwf-stage-view *,
+  h2.permalinks-header,
+  ul.permalinks-list *,
+  table.fileList *,
+  td a,
+  td *:not(code):not(pre),
+  div.signupIntroDefault :is(div, p),
+  label.attach-previous.setting-checkbox,
+  [class*="jenkins-checkbox"] *,
+  div.textarea-preview-container,
+  :root:not([class*="ace"]):not(pre>code *):not([class*="jenkins-input"]),
+  .MuiTreeItem-label {
+    font-family: var(--font-family-sans) !important;
+  }
+
+  /* login account show - https://www.cssfontstack.com/Papyrus */
+  div.login a.model-link,
+  div#main-panel a[name="skip2content"]+h1,
+  ul#breadcrumbs > li.item:first-of-type > a.model-link {
+    font-family: var(--font-family-handwritten) !important;
+    font-size: 18px !important;
+    text-transform: none !important;
+  }
+  ul#breadcrumbs > li.item:first-of-type > a.model-link,
+  div.login a.model-link span.hidden-xs.hidden-sm {
+    font-size: 16px !important;
+    padding-top: 8px !important;
+    font-weight: 550 !important;
+  }
+
+  tr.app-summary>td>pre>code>ul>li * {
+    font-family: var(--font-family-mono) !important;
+    font-size: var(--font-size-normal-mono) !important;
+  }
+  div#main-panel a[name="skip2content"]+h1 {
+    font-size: 28px !important;
+  }
+
+  /* tabbar */
+  .tabBar .tab a {
+    font-size: var(--font-size-normal-sans) !important;
+  }
+  /**
+   * setting-* ; div.setting-main *                    configuration
+   * textarea.jenkins-input                            snippet output
+   * "ace_"                                            Jenkins Pipeline Script Textarea
+   * div.setting-main *
+   * div.pretty-print                                  config.xml
+   * .jenkins-form-label                               config
+  **/
+  div.setting-main:not([class*="help-sibling"]) *:not(
+    label.attach-previous.setting-checkbox,
+    [class*="repeated-chunk"]
+  ),
+  .setting-main > textarea,
+  td.setting-main,
+  div.pretty-print,
+  .errorList .problem *,
+  [data-theme*=material-] #main-panel > pre {
+    font-family: var(--font-family-mono) !important;
+    font-size: var(--font-size-normal-mono) !important;
+  }
+
+  /* for chrome plugin: JSON Viewer Pro */
+  .jv-code-editor { font-size: 20px !important;  }
+
+  /**
+   * #main-panel>pre, #main-panel>pre *, pre#main-panel, pre#main-panel *, div#main-panel>pre, div#main-panel>pre *, div#main-panel>pre code, div#main-panel>pre code *,
+   * :root,
+   * pre:not(#json-viewer)   - for chrome plugin: JSON Viewer Pro ( exclude )
+  **/
+  ::marker,
+  kbd,
+  option, option *,
+  canvas, canvas *,
+  pre code, pre code *,
+  pre code ul li *,
+  code:not(h1 code, h2 code, h3 code, h4 code, h5 code, h6 code), code:not(h1 code, h2 code, h3 code, h4 code, h5 code, h6 code) *,
+  input :where(code, pre),
+  select, select *,
+  script, script *,
+  textarea, textarea *,
+  #view-message>pre, #view-message>pre *, div#view-message>pre, div#view-message>pre *,
+  #side-panel>pre, #side-panel>pre *, div#side-panel>pre, div#side-panel>pre *,
+  .code, .code *,
+  div.code *, table.code, table.code *, table.pre, table.pre *,
+  .jenkins-input,
+  .dropdownList,
+  .jenkins-select__input,
+  .setting-input,
+  select.setting-input, select.setting-input *, select.setting-input.validated,
+  input.combobox2.setting-input, input.setting-input,
+  textarea.jenkins-input, textarea.setting-input,
+  #terminal, #terminal *,
+  tr.line_holder *, span[class*=cm-],
+  div.help *,
+  caption.caption table.diffLineTable *,
+  .log-body p a.linenumber::before, .log-body .line,
+  .healthReportDetails td:is([align*="right"]), .coverage-cell-link, .coverage-cell-inner {      /* code coverage tolltip */
+    font-family: var(--font-family-mono) !important;
+    font-size: var(--font-size-normal-mono) !important;
+    line-height: 1.5em !important;
+  }
+  span[class*='pipeline-node']::before {                      /* parallel nodename */
+    font-family: 'Lekton Nerd Font Mono', var(--font-family-mono) !important;
+    font-size: var(--font-size-normal-mono) !important;
+    font-style: italic !important;
+  }
+
+  pre#out.console-output span.timestamp,                      /* console output timestamp */
+  pre#out.console-output span.timestamp b,
+  pre#out.console-output span.timestamp * {
+    font-family: 'Lekton Nerd Font Mono', var(--font-family-mono-accent) !important;
+    color: #696969 !important;
+    font-style: italic !important;
+  }
+  [class*="ace_"]:not([class*="workspace"], [class*="workplace__"]),
+  [class*="ace_"]:not([class*="workspace"], [class*="workplace__"]) *,
+  textarea.ace_text-input,
+  .ace_active-line, .ace_editor,
+  cursor,
+  [class*="console-output"] *,
+  .console-output, .console-output *,
+  #main-panel>pre, #main-panel>pre *,
+  pre#main-panel, pre#main-panel *,
+  div#main-panel>pre, div#main-panel>pre *, div#main-panel>pre code, div#main-panel>pre code *,
+  .CodeMirror-lines *, div.CodeMirror-lines *,
+  .CodeMirror, .CodeMirror *, .CodeMirror pre,
+  .lineNum, .code-line,
+  .file-source * {                                             /* UT coverage */
+    font-family: var(--font-family-mono) !important;
+    font-size: var(--font-size-big-mono) !important;
+    line-height: 1.5em !important;
+  }
+
+  /* Metrics plugin: Timings table */
+  table.bigtable.pane th {
+    border: 1px solid !important;
+    border-right-color: #4d4c4c !important;
+    border-bottom-color: #4d4c4c !important;
+    color: #ddd !important;
+  }
+
+  /* icon */
+  ::before, ::after {
+    font-family: var(--font-family-icon) !important;
+  }
+  .glyphicon::before {
+    font-family: "Glyphicons Halflings" !important;
+  }
+  a.anchorjs-link::after {
+    font-family: "anchorjs-icons" !important;
+  }
+
+  span.jenkins-icon-adjacent {
+    font-family: var(--font-family-handwritten);
+    font-size: 100% !important;
+  }
+
+  .log-header {
+    font-family: var(--font-family-sans) !important;
+    font-size: var(--font-size-big-sans) !important;
+  }
+
+  /* bluetooth */
+  .result-item-label,
+  .TruncatingLabel,
+  [class*="RunDetailsHeader"] *,
+  [class*="JTable"],
+  .activity-actions-container,
+  .Header-pageTabs,
+  .development-footer {
+    font-size: var(--font-size-normal-mono) !important;
+  }
+
+  select {
+    outline: 0 !important;
+  }
+
+  /* comments */
+  span.pipeline-new-node, span.cm-comment, .ace-tomorrow .ace_comment, span.ace_comment {
+    font-style: italic !important;
+  }
+  .ace-tm .ace_comment, span.cm-comment {                     /* comments */
+    color: darkgray !important;
+  }
+
+  /* ── pipeline graph view - pipeline-console ── */
+  div.log-card--header, .log-card--header.step-detail-group, .log-card--header.step-header {
+    font-family: var(--font-family-mono-accent) !important;
+    font-size: var(--font-size-big-mono) !important;
+    font-weight: 600 !important;
+  }
+  div.pgv-step-detail-header__actions span,                   /* higher-version pgv - timestamp */
+  div.pgv-step-detail-header__content span,                   /* higher-version pgv - content */
+  div.pgv-tree-item__description, div.pgv-tree-item__name,    /* higher-version pgv - sidebar */
+  div.log-card--text {
+    font-family: 'AtkynsonNext Nerd Font' !important;
+  }
+  div.pgv-step-detail-header__content span {
+    font-size: var(--font-size-normal-sans) !important;
+  }
+  .css-9l3uo3 {
+    font-family: var(--font-family-mono) !important;
+    font-size: var(--font-size-small-mono) !important;
+    font-style: italic !important;
+  }
+  .css-3wafqk {
+    font-family: var(--font-size-big-mono-accent) !important;
+    font-size: var(--font-size-big-mono) !important;
+    white-space: pre-wrap !important;
+  }
+
+  /* ── inline badge (e.g. uppercase "MANDATORY FIELD") in parameter/form description ── */
+  .jenkins-form-description span[style*="background"],
+  .jenkins-form-description span[style*="text-transform"] {
+    display: inline-block !important;
+    line-height: 1 !important;
+    text-box-trim: trim-both !important;
+    text-box-edge: cap alphabetic !important;
+    text-box: trim-both cap alphabetic !important;             /* shorthand fallback */
+    /* font-family: "Gisha Nerd Font" !important; */
+    /* trimming removes the line-box leading, so add the vertical breathing room back */
+    padding-block: .4em !important;
+  }
+
+} /* @-moz-document: jenkins */
