@@ -4,7 +4,7 @@
 
 ** installation
 + install stylus extension for [[https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne][Stylus for Chrome]] | [[https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe][Stylish for Chrome]] | [[https://addons.mozilla.org/pt-BR/firefox/addon/styl-us/][Firefox]] | [[https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne][edge]]
-+ click to install 📦 [[https://github.com/marslo/ifonts-jenkins/raw/main/ifonts-jenkins.user.css][marslo/ifonts-jenkins]] | [[https://userstyles.world/api/style/5264.user.css][iFonts Jenkins (marslo)]]
++ click to install 📦 [[https://github.com/marslo/ifonts-jenkins/raw/main/ifonts-jenkins.user.css][marslo/ifonts-jenkins]] | [[https://userstyles.world/api/style/30122.user.css][iFonts Jenkins (marslo)]]
 
 ** fonts download
 
@@ -20,6 +20,7 @@
 + [[https://github.com/marslo/fonts/tree/fonts/Titillium][Titillium Nerd Font]] | [[https://fonts.adobe.com/fonts/titillium-web][Titillium]] | [[https://fonts.google.com/specimen/Titillium+Web][preview]]
 
 *** mono
++ [[https://github.com/marslo/fonts/tree/fonts/Blex/IBMPlexMonoLigNF][BlexMonoLig Nerd Font Mono]]
 + [[https://github.com/marslo/fonts/tree/fonts/Operator/OperatorMonoLigNF][OperatorMonoLig Nerd Font Mono]] | [[https://github.com/marslo/fonts/tree/fonts/Operator/OperatorMono][OperatorMono Nerd Font Mono]]
 + [[https://github.com/marslo/fonts/tree/fonts/Monaco][Monaco Nerd Font Mono]] | [[https://www.cufonfonts.com/font/monaco][Monaco]]
 + [[https://github.com/marslo/fonts/tree/fonts/Recursive/Recursive_Code_NF/RecMonoCasual][RecMonoCasual Nerd Font Mono]] | [[https://github.com/arrowtype/recursive/tree/main/fonts/ArrowType-Recursive-1.085/Recursive_Code][Rec Mono Causal]]

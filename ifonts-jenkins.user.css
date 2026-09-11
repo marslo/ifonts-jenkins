@@ -4,10 +4,10 @@
 @namespace      github.com/marslo
 @description    jenkins-only font customization
 @author         marslo
-@homepageURL    https://github.com/marslo/ifonts
-@updateURL      https://github.com/marslo/ifonts/raw/main/ifonts-jenkins.user.css
+@homepageURL    https://github.com/marslo/ifonts-jenkins
+@updateURL      https://github.com/marslo/ifonts-jenkins/raw/main/ifonts-jenkins.user.css
 @advanced       text font-family-sans        "Sans Fonts"        ""Titillium Nerd Font Upright", "Titillium Nerd Font", "Gisha Nerd Font", "Recursive Sans Casual Static Nerd Font", "Yoshe Shayufeite Nerd Font", "MicrosoftYaHei Nerd Font", "LXGWBright Nerd Font", "Qian Li Jiang Shan Nerd Font", "MFeltPenPRC Nerd Font", "MFeltPenHKSemi Nerd Font", "Grandstander Nerd Font", "Ubuntu", "Candara Nerd Font", "Titillium Up", Titillium, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Font Text""
-@advanced       text font-family-mono        "Mono Fonts"        ""OperatorMonoSSmLig Nerd Font Mono", "OperatorMonoLig Nerd Font Mono", "OperatorMono Nerd Font Mono", "Lekton Nerd Font Mono", "JetBrainsMono Nerd Font Mono", "RecMonoCasual Nerd Font Mono", "Monaco Nerd Font Mono", Menlo, "Andale Mono", "Ubuntu Mono", "Monofur Nerd Font Mono", Consolas, "Yozai Nerd Font""
+@advanced       text font-family-mono        "Mono Fonts"        ""BlexMonoLig Nerd Font Mono", "OperatorMonoSSmLig Nerd Font Mono", "OperatorMonoLig Nerd Font Mono", "OperatorMono Nerd Font Mono", "Lekton Nerd Font Mono", "JetBrainsMono Nerd Font Mono", "RecMonoCasual Nerd Font Mono", "Monaco Nerd Font Mono", Menlo, "Andale Mono", "Ubuntu Mono", "Monofur Nerd Font Mono", Consolas, "Yozai Nerd Font""
 @advanced       text font-family-handwritten "Handwritten Fonts" ""Papyrus Nerd Font", fantasy"
 @advanced       text font-family-icon        "Icon Fonts"        ""Google Material Icons", "Material Icons Extended", entypo, "Adgs Icons", "Google Symbols", "Font Awesome 7 Pro", "Font Awesome 5 Free", "Font Awesome 5 Pro", "Font Awesome 6 Free", "Font Awesome 6 Pro", FontAwesome, "Glyphicons Halflings", ReadMe-Icons, StructureFontAwesome, VideoJS, codicon, controlIcons, iconfont, iconfont-luckysheet, icozoom, retina_icons, streamline, union-design-icons, yunfont, okticon, docons, zipformplus, "Font Awesome 6 Brands", octicons, perforceIcons, FontADP, "Support MDL2 Assets", geico, marvell-icons, icomoon, element-icons, olive-icons, "SF Pro Icons", Iconochive-Regular, sans-serif"
 ==/UserStyle== */
@@ -56,10 +56,10 @@
     --font-size-normal-sans: 18px;
     --font-size-small-sans: 15px;
 
-    --font-size-big-mono: 17px;
-    --font-size-normal-mono: 15px;
-    --font-size-small-mono: 14px;
-    --font-size-xsmall-mono: 13px;
+    --font-size-big-mono: 18px;
+    --font-size-normal-mono: 16px;
+    --font-size-small-mono: 15px;
+    --font-size-xsmall-mono: 14px;
 
     --font-size-h1: 34px;
     --font-size-h2: 26px;
