@@ -1,3 +1,16 @@
+## [1.0.1](https://github.com/marslo/ifonts-jenkins/compare/v1.0.0...v1.0.1) (2026-09-11)
+
+### Bug Fixes
+
+* **scope**: stop the style loading site-wide ([264c2de](https://github.com/marslo/ifonts-jenkins/commit/264c2ded2849ab48543fd323821abf6df6983346))
+  - move top-level @font-face and :root into the @-moz-document block so the style no longer injects a global section on every site
+  - drop three unused google-fonts @import links
+
+
+### Others
+
+* **BlexMonoLig**: using `"BlexMonoLig Nerd Font Mono"` as default mono font ([b959d6e](https://github.com/marslo/ifonts-jenkins/commit/b959d6e5d74f7a3a805ac81b1ac8dee582c5f51a))
+
 ## 1.0.0 (2026-09-11)
 
 ### Features
