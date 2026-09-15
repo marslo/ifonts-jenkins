@@ -7,7 +7,7 @@
 @homepageURL    https://github.com/marslo/ifonts-jenkins
 @updateURL      https://github.com/marslo/ifonts-jenkins/raw/main/ifonts-jenkins.user.css
 @advanced       text font-family-sans        "Sans Fonts"        ""Titillium Nerd Font Upright", "Titillium Nerd Font", "Gisha Nerd Font", "Recursive Sans Casual Static Nerd Font", "Yoshe Shayufeite Nerd Font", "MicrosoftYaHei Nerd Font", "LXGWBright Nerd Font", "Qian Li Jiang Shan Nerd Font", "MFeltPenPRC Nerd Font", "MFeltPenHKSemi Nerd Font", "Grandstander Nerd Font", "Ubuntu", "Candara Nerd Font", "Titillium Up", Titillium, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Font Text""
-@advanced       text font-family-mono        "Mono Fonts"        ""BlexMonoLig Nerd Font Mono", "OperatorMonoSSmLig Nerd Font Mono", "OperatorMonoLig Nerd Font Mono", "OperatorMono Nerd Font Mono", "Lekton Nerd Font Mono", "JetBrainsMono Nerd Font Mono", "RecMonoCasual Nerd Font Mono", "Monaco Nerd Font Mono", Menlo, "Andale Mono", "Ubuntu Mono", "Monofur Nerd Font Mono", Consolas, "Yozai Nerd Font""
+@advanced       text font-family-mono        "Mono Fonts"        ""BlexMonoLig Nerd Font Mono Book", "BlexMonoLig Nerd Font Mono", "OperatorMonoSSmLig Nerd Font Mono", "OperatorMonoLig Nerd Font Mono", "OperatorMono Nerd Font Mono", "Lekton Nerd Font Mono", "JetBrainsMono Nerd Font Mono", "RecMonoCasual Nerd Font Mono", "Monaco Nerd Font Mono", Menlo, "Andale Mono", "Ubuntu Mono", "Monofur Nerd Font Mono", Consolas, "Yozai Nerd Font""
 @advanced       text font-family-handwritten "Handwritten Fonts" ""Papyrus Nerd Font", fantasy"
 @advanced       text font-family-icon        "Icon Fonts"        ""Google Material Icons", "Material Icons Extended", entypo, "Adgs Icons", "Google Symbols", "Font Awesome 7 Pro", "Font Awesome 5 Free", "Font Awesome 5 Pro", "Font Awesome 6 Free", "Font Awesome 6 Pro", FontAwesome, "Glyphicons Halflings", ReadMe-Icons, StructureFontAwesome, VideoJS, codicon, controlIcons, iconfont, iconfont-luckysheet, icozoom, retina_icons, streamline, union-design-icons, yunfont, okticon, docons, zipformplus, "Font Awesome 6 Brands", octicons, perforceIcons, FontADP, "Support MDL2 Assets", geico, marvell-icons, icomoon, element-icons, olive-icons, "SF Pro Icons", Iconochive-Regular, sans-serif"
 ==/UserStyle== */
@@ -216,8 +216,8 @@
   div.pretty-print,
   .errorList .problem *,
   [data-theme*=material-] #main-panel > pre {
-    font-family: var(--font-family-mono) !important;
-    font-size: var(--font-size-normal-mono) !important;
+    font-family: 'LektonLig Nerd Font Mono', var(--font-family-mono) !important;
+    font-size: var(--font-size-big-mono) !important;
   }
 
   /* for chrome plugin: JSON Viewer Pro */
@@ -260,21 +260,25 @@
     font-size: var(--font-size-normal-mono) !important;
     line-height: 1.5em !important;
   }
-  span[class*='pipeline-node']::before {                      /* parallel nodename */
+  span[class*='pipeline-node']::before {                                /* parallel nodename */
     font-family: 'Lekton Nerd Font Mono', var(--font-family-mono) !important;
     font-size: var(--font-size-normal-mono) !important;
     font-style: italic !important;
   }
 
-  pre#out.console-output span.timestamp,                      /* console output timestamp */
-  pre#out.console-output span.timestamp b,
-  pre#out.console-output span.timestamp * {
-    font-family: 'Lekton Nerd Font Mono', var(--font-family-mono-accent) !important;
+  #main-panel > pre.console-output span.timestamp,                      /* console output timestamp */
+  #main-panel > pre.console-output span.timestamp b,
+  #main-panel > pre.console-output span.timestamp * {
+    font-family: 'IosevkaPlexMarslo Nerd Font Mono', 'LektonLig Nerd Font Mono', var(--font-family-mono-accent) !important;
     color: #696969 !important;
     font-style: italic !important;
   }
-  [class*="ace_"]:not([class*="workspace"], [class*="workplace__"]),
-  [class*="ace_"]:not([class*="workspace"], [class*="workplace__"]) *,
+  #main-panel > pre.console-output span.pipeline-new-node {             /* console output node info */
+    font-family: 'BlexMonoLig Nerd Font Mono Light' !important;
+    font-size: var(--font-size-normal-mono) !important;
+  }
+  [class*="ace_"]:not([class*="workspace"]),
+  [class*="ace_"]:not([class*="workspace"]) *,
   textarea.ace_text-input,
   .ace_active-line, .ace_editor,
   cursor,
@@ -381,6 +385,36 @@
     /* font-family: "Gisha Nerd Font" !important; */
     /* trimming removes the line-box leading, so add the vertical breathing room back */
     padding-block: .4em !important;
+  }
+
+  /* ── BUILD_NAME width in build history ── */
+  .build-row-cell .block.wrap.build-name-controls > .pane.build-name.wrapped {
+    float: none !important;      /* remove the `float` property and revert to block-level, full-width layout */
+    width: auto !important;
+    max-width: 100% !important;  /* DO NOT exceeding the parent element*/
+    height: auto !important;
+    overflow: hidden;            /* BFC, avoiding the icon on the right */
+    box-sizing: border-box;
+  }
+  /* <a> link: allow consecutive character newlines */
+  .build-row-cell .pane.build-name.wrapped > a.display-name {
+    display: block;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+
+  /* ── BADGE(s) in vertical middle ── */
+  .build-row-cell {
+    position: relative;
+  }
+  .build-row-cell .build-name-controls .build-controls.wrapped {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
   }
 
 } /* @-moz-document: jenkins */
