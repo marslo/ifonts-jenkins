@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/marslo/ifonts-jenkins/compare/v1.0.1...v1.0.2) (2026-09-15)
+
+### Others
+
+* **console-output**, **node-info**: add light and smaller font for `pipeline-new-node` in console output; using auto-width for build-name in Build History ([02930c0](https://github.com/marslo/ifonts-jenkins/commit/02930c08d5aa8c9495c24c27082f3e173c3be9ef))
+
 ## [1.0.1](https://github.com/marslo/ifonts-jenkins/compare/v1.0.0...v1.0.1) (2026-09-11)
 
 ### Bug Fixes
