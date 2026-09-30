@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/marslo/ifonts-jenkins/compare/v1.0.3...v1.0.4) (2026-09-30)
+
+### Bug Fixes
+
+* **Blex**: fix the `Blex` local fonts in global variable ([3042f5d](https://github.com/marslo/ifonts-jenkins/commit/3042f5d84bd69b5436c2d79c7d2bd76029834415))
+
 ## [1.0.3](https://github.com/marslo/ifonts-jenkins/compare/v1.0.2...v1.0.3) (2026-09-15)
 
 ### Others
