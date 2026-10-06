@@ -229,7 +229,7 @@
   canvas, canvas *,
   pre code, pre code *,
   pre code ul li *,
-  code:not(h1 code, h2 code, h3 code, h4 code, h5 code, h6 code), code:not(h1 code, h2 code, h3 code, h4 code, h5 code, h6 code) *,
+  code:not(h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, .desc code), code:not(h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, .desc code) *,
   input :where(code, pre),
   select, select *,
   script, script *,
@@ -410,6 +410,13 @@
     top: 50%;
     right: 8px;
     transform: translateY(-50%);
+  }
+
+  /* ── stage view ── */
+  .changeset-box {
+    display: flex;
+    align-items: center;      /* centered vertically   */
+    justify-content: center;  /* centered horizontally */
   }
 
 } /* @-moz-document: jenkins */
