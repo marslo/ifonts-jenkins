@@ -383,12 +383,19 @@
   }
 
   /* ── BUILD_NAME width in build history ── */
+  /* header row = build-name (wraps, takes remaining width) + badges (fixed, top-right) */
+  .build-row-cell .block.wrap.build-name-controls {
+    display: flex !important;
+    align-items: flex-start;     /* keep badges on the first line, not centered over `desc` */
+    gap: 6px;
+  }
   .build-row-cell .block.wrap.build-name-controls > .pane.build-name.wrapped {
-    float: none !important;      /* remove the `float` property and revert to block-level, full-width layout */
+    float: none !important;      /* drop float; use a flex item instead of block/float layout */
+    flex: 1 1 auto;              /* take the remaining width */
+    min-width: 0;                /* allow long build names to wrap */
     width: auto !important;
-    max-width: 100% !important;  /* DO NOT exceeding the parent element*/
+    max-width: 100% !important;  /* DO NOT exceeding the parent element */
     height: auto !important;
-    overflow: hidden;            /* BFC, avoiding the icon on the right */
     box-sizing: border-box;
   }
   /* <a> link: allow consecutive character newlines */
@@ -401,15 +408,14 @@
     overflow-wrap: anywhere;
   }
 
-  /* ── BADGE(s) in vertical middle ── */
+  /* ── BADGE(s) pinned top-right; never overlapped by a wide `desc` table ── */
   .build-row-cell {
     position: relative;
   }
-  .build-row-cell .build-name-controls .build-controls.wrapped {
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    transform: translateY(-50%);
+  .build-row-cell .build-name-controls > .pane.build-controls.wrapped {
+    float: none !important;      /* drop float; flex item instead */
+    flex: 0 0 auto;              /* natural width, never shrink away */
+    margin-left: auto;           /* push to the right edge of the header row */
   }
 
   /* ── stage view ── */
