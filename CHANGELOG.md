@@ -1,3 +1,16 @@
+## [1.0.5](https://github.com/marslo/ifonts-jenkins/compare/v1.0.4...v1.0.5) (2026-10-20)
+
+### Bug Fixes
+
+* **build-history**: pin build-row badges to top-right via flex ([a9b6d54](https://github.com/marslo/ifonts-jenkins/commit/a9b6d54174e761a6d02e82508785ee77c4ea4520))
+  - lay out `.build-name-controls` as flex so badges stay on the first line
+  - replace the `position:absolute; top:50%` badge centering that let a wide `desc` table overlap and hide the icons
+  - let `.build-name` flex-grow and wrap; push `.build-controls` right with `margin-left:auto`
+
+### Others
+
+* **stage-view**: add centered vertically and horizontally for stage view ([1cd2b41](https://github.com/marslo/ifonts-jenkins/commit/1cd2b41c715d4ddc80e2d7ffef8d849c4694bb24))
+
 ## [1.0.4](https://github.com/marslo/ifonts-jenkins/compare/v1.0.3...v1.0.4) (2026-09-30)
 
 ### Bug Fixes
