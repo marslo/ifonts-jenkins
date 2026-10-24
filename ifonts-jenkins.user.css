@@ -418,6 +418,16 @@
     margin-left: auto;           /* push to the right edge of the header row */
   }
 
+  /* ── two-column pages ( manage jenkins, user settings ): narrow / wide main panel widened to 85vw ( capped at 90% of the contents width ) ── */
+  .app-page-body:has( > .app-page-body__sidebar ) > .app-page-body__contents:has( > :is( .app-main-panel--narrow, .app-main-panel--wide ) ) {
+    container-type: inline-size;
+  }
+  .app-page-body:has( > .app-page-body__sidebar ) > .app-page-body__contents > :is( .app-main-panel--narrow, .app-main-panel--wide ) {
+    width: min( 85vw, 90cqw ) !important;
+    max-width: none !important;
+    --form-item-max-width: 100%;
+  }
+
   /* ── stage view ── */
   .changeset-box {
     display: flex;
