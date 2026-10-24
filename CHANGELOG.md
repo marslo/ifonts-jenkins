@@ -1,3 +1,25 @@
+## [1.1.0](https://github.com/marslo/ifonts-jenkins/compare/v1.0.5...v1.1.0) (2026-10-24)
+
+### Features
+
+* **layout**: widen narrow / wide main panels on new-ui two-column pages ( manage jenkins, user settings ) to 85vw capped at 90% of the contents width ([593b3b9](https://github.com/marslo/ifonts-jenkins/commit/593b3b980bdf1de6ebeb30b460def42bc7580cc3))
+  - widen `.app-main-panel--narrow` / `--wide` on pages with `.app-page-body__sidebar` to `min( 85vw, 90cqw )`
+  - make `.app-page-body__contents` an inline-size container to cap the width
+  - lift `--form-item-max-width` so title, admin messages and form align
+  - match new-ui classes only so lts layouts stay unchanged
+  - parent chain
+    - new ui (2.587  - hit): `div#page-body.app-page-body` > `div#side-panel.app-page-body__sidebar` + `div.app-page-body__contents` > `div#main-panel.app-main-panel.app-main-panel--narrow` / `--wide`
+    - old ui (2.580.1 - won't hit): `div#page-body.app-page-body.app-page-body--two-column` > `div#main-panel` (no class); no `__sidebar` / `app-main-panel--*`
+
+### Bug Fixes
+
+* **release**, **typos**: stop duplicating `BREAKING CHANGE` footers in release notes and ignore changelog commit SHAs in typos ([42c75ea](https://github.com/marslo/ifonts-jenkins/commit/42c75ea594e6b447358dd56ee7db32615b2cba44))
+
+### Documentation
+
+* update README ([82a2e2b](https://github.com/marslo/ifonts-jenkins/commit/82a2e2ba3f5c4ac9a13bd6ab28ca571a4cf8e3f2))
+  - convert `README.org` headings, lists, links and quote to markdown
+
 ## [1.0.5](https://github.com/marslo/ifonts-jenkins/compare/v1.0.4...v1.0.5) (2026-10-20)
 
 ### Bug Fixes
